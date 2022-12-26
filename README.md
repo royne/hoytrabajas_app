@@ -3,22 +3,12 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+steps for installation
 
-* Ruby version
+  * install docker and docker-compose
+  * sudo docker-compose build
+  * sudo docker-compose up
 
-* System dependencies
+to enter the container
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  *sudo docker exec -it todayyouwork_app_web_1 /bin/bash
