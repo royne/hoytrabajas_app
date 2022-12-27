@@ -3,7 +3,7 @@ class ProvidersController < ApplicationController
 
   # GET /providers or /providers.json
   def index
-    @providers = Provider.all
+    @providers = Provider.all.includes(:account, :bank)
   end
 
   # GET /providers/1 or /providers/1.json
@@ -18,6 +18,7 @@ class ProvidersController < ApplicationController
 
   # GET /providers/1/edit
   def edit
+    @banks = Bank.all
   end
 
   # POST /providers or /providers.json
@@ -61,7 +62,7 @@ class ProvidersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_provider
-      @provider = Provider.find(params[:id])
+      @provider = Provider.includes(account: :bank).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

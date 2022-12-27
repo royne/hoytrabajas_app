@@ -3,12 +3,23 @@
 <h1>Providers</h1>
 
 <div id="providers">
-  <% @providers.each do |provider| %>
-    <%= render provider %>
-    <p>
-      <%= link_to "Show this provider", provider %>
-    </p>
-  <% end %>
+  <table class="table">
+    <thead>
+      <th>
+        <td>Nombre</td>
+        <td>Nit</td>
+        <td>Contacto</td>
+        <td>Telefono</td>
+        <td>Banco</td>
+        <td>No. cuenta</td>
+      </th>
+    </thead>
+    <tbody>
+      <% @providers.each do |provider| %>
+        <%= render provider %>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New provider", new_provider_path %>
