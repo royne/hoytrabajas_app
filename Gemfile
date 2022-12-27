@@ -51,6 +51,8 @@ gem "sassc-rails"
 gem 'devise'
 gem 'simple_form'
 gem 'bootstrap', '~> 5.1.3'
+gem 'will_paginate', '~> 3.3'
+gem 'will_paginate-bootstrap-style'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

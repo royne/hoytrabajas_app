@@ -7,6 +7,7 @@ class Provider < ApplicationRecord
 
   accepts_nested_attributes_for :account
 
+  self.per_page = 10
 
   def bank_name
     bank&.name
