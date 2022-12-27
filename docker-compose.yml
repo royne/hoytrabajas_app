@@ -19,6 +19,8 @@ services:
       - .:/usr/src/app
     depends_on:
       - db
+    tty: true
+    stdin_open: true
 
 volumes:
   db_data:
