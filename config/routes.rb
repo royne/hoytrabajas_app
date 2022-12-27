@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root 'banks#index'
+  root 'dashboard#index'
   devise_for :users
   
   resources :banks
   resources :providers
+  resources :dashboard, only: %i[index]
+
 end
