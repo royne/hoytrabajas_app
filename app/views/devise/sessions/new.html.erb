@@ -1,0 +1,33 @@
+
+<section class="home">
+  <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+    <h1>Bienvenido</h1>
+    <p>Registrate o inicia sesión</p>
+  </div>
+  <div class="col-6 justify-content-center align-items-center">
+    <div class="form_login col-8">
+      <h2>Log in</h2>
+      
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs mb-3">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+                      required: false,
+                      input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+      
+        <div class="form-actions d-grid gap-2">
+          <%= f.button :submit, "Log in", class:"btn btn-sm btn-dark" %>
+        </div>
+        <%= render "devise/shared/error_messages" %>
+      <% end %>
+      
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</section>
