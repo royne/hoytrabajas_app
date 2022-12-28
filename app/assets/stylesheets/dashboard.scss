@@ -15,20 +15,6 @@
     padding: 3%;
     display: flex;
     justify-content: space-around;
-
-    .dashboard_content_card {
-      width: 30%;
-      height: 10vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    }
   }
 
 }

@@ -1,11 +1,11 @@
 <div id="banks" class="container">
-  <h1>Banks</h1>
+  <h1><%= t('bank.name') %></h1>
 
   <table class="table">
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Accion</th>
+        <th><%= t('bank.table.name') %></th>
+        <th><%= t('bank.table.action') %></th>
       </tr>
     </thead>
     <tbody>
@@ -15,5 +15,5 @@
     </tbody>
   </table>
   <%= paginate @providers %>
-  <%= link_to "New bank", new_bank_path, class:"btn btn-dark btn-sm" %>
+  <%= link_to t('bank.new_bank'), new_bank_path, class:"btn btn-dark btn-sm" %>
 </div>

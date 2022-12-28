@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @bank %>
-
-<div>
-  <%= link_to "Edit this bank", edit_bank_path(@bank) %> |
-  <%= link_to "Back to banks", banks_path %>
-
-  <%= button_to "Destroy this bank", @bank, method: :delete %>
+<div class="container">
+  <h1><%= t('bank.name') %></h1>
+  
+  <div class="d-flex justify-content-center"><span class="box_card"><%= @bank.name %></span></div>
+  
+  <div class="d-flex justify-content-around">
+    <%= link_to t('bank.edit_bank'), edit_bank_path(@bank),class:"btn btn-success btn-sm" %>
+    <%= link_to t('bank.back_banks'), banks_path, class:"btn btn-info btn-sm" %>
+    <%= button_to t('bank.destroy_bank'), @bank, method: :delete, class:"btn btn-danger btn-sm" %>
+  </div>
 </div>

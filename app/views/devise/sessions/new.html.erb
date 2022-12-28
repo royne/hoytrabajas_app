@@ -1,12 +1,12 @@
 
 <section class="home">
   <div class="col-6 d-flex flex-column justify-content-center align-items-center">
-    <h1>Bienvenido</h1>
-    <p>Registrate o inicia sesión</p>
+    <h1><%= t('home.welcome') %></h1>
+    <p><%= t('home.message') %></p>
   </div>
   <div class="col-6 justify-content-center align-items-center">
     <div class="form_login col-8">
-      <h2>Log in</h2>
+      <h2><%= t('home.login') %></h2>
       
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.error_notification %>
@@ -22,7 +22,7 @@
         </div>
       
         <div class="form-actions d-grid gap-2">
-          <%= f.button :submit, "Log in", class:"btn btn-sm btn-dark" %>
+          <%= f.button :submit, t('home.login'), class:"btn btn-sm btn-dark" %>
         </div>
         <%= render "devise/shared/error_messages" %>
       <% end %>

@@ -1,8 +1,8 @@
 <tr>
   <td><%= link_to provider.name, provider %></td>
-  <td><%= provider.nit %></td>
-  <td><%= provider.contact_name %></td>
-  <td><%= provider.phone %></td>
-  <td><%= provider.bank_name %></td>
-  <td><%= provider.account_number %></td>
+  <td><%= text_to_display(provider.nit) %></td>
+  <td><%= text_to_display(provider.contact_name) %></td>
+  <td><%= text_to_display(provider.phone) %></td>
+  <td><%= text_to_display(provider.bank_name) %></td>
+  <td><%= text_to_display(provider.account_number) %></td>
 </tr>

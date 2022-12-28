@@ -6,6 +6,7 @@ class Provider < ApplicationRecord
 
   validates :name, presence: true
   validates :contact_name, presence: true, length: { maximum: 10 }
+  validates :phone, length: { maximum: 10 }
   validate :validate_nit
   
   accepts_nested_attributes_for :account, update_only: true

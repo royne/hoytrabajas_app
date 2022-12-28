@@ -1,11 +1,11 @@
 <div class="home">
   <div class="col-6 d-flex flex-column justify-content-center align-items-center">
-    <h1>Bienvenido</h1>
-    <p>Registrate o inicia sesión</p>
+    <h1><%= t('home.welcome') %></h1>
+    <p><%= t('home.message') %></p>
   </div>
   <div class="col-6 justify-content-center align-items-center">
     <div class="form_login col-8">
-      <h2>Sign up</h2>
+      <h2><%= t('home.signup') %></h2>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -18,7 +18,7 @@
           </div>
       
           <div class="form-actions d-grid gap-2">
-            <%= f.button :submit, "Sign up", class:"btn btn-sm btn-dark" %>
+            <%= f.button :submit, t('home.signup'), class:"btn btn-sm btn-dark" %>
           </div>
         <% end %>
 

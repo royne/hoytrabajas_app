@@ -1,9 +1,9 @@
-<h1>New bank</h1>
+<h1><%= t('bank.new_bank') %></h1>
 
 <%= render "form", bank: @bank %>
 
 <br>
 
 <div>
-  <%= link_to "Back to banks", banks_path %>
+  <%= link_to t('bank.back_banks'), banks_path %>
 </div>

@@ -1,11 +1,12 @@
 <nav class="dashboard_sidenav">
   <div class="container mt-3">
-    <h3>DashBoard</h3>
+    <h3><%= t('dashboard.name') %></h3>
     <div>
       <ul>
-        <li><%= link_to "Providers" , providers_path %></li>
-        <li><%= link_to "Banks" , banks_path %></li>
+        <li><%= link_to t('dashboard.providers'), providers_path %></li>
+        <li><%= link_to t('dashboard.banks') , banks_path %></li>
       </ul>
     </div>
+    <%= button_to t('home.logout'), destroy_user_session_path, method: :delete, class:"btn btn-sm btn-danger"%>
   </div>
 </nav>

@@ -1,10 +1,23 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @provider %>
+<div id="providers" class="container">
+  <h1>
+    <%= t('provider.name') %>
+  </h1>
 
-<div>
-  <%= link_to "Edit this provider", edit_provider_path(@provider) %> |
-  <%= link_to "Back to providers", providers_path %>
+  <table class="table">
+    <thead>
+      <%= render('head_table') %>
+    </thead>
+    <tbody>
+      <%= render @provider %>
+    </tbody>
+  </table>
 
-  <%= button_to "Destroy this provider", @provider, method: :delete %>
+  <div class="d-flex justify-content-around">
+    <%= link_to t('provider.edit_provider'), edit_provider_path(@provider), class:"btn btn-success btn-sm" %>
+    <%= link_to t('provider.back_providers'), providers_path, class:"btn btn-info btn-sm" %>
+    <%= button_to t('provider.destroy_provider'), @provider, method: :delete, class:"btn btn-danger btn-sm" %>
+  </div>
 </div>
+

@@ -1,26 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
 <div id="providers" class="container">
-  <h1>Providers</h1>
+  <h1><%= t('provider.name') %></h1>
   
   <table class="table">
     <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Nit</th>
-        <th>Contacto</th>
-        <th>Telefono</th>
-        <th>Banco</th>
-        <th>No. cuenta</th>
-      </tr>
+      <%= render ('head_table') %>
     </thead>
     <tbody>
       <% @providers.each do |provider| %>
-      <%= render provider %>
+        <%= render provider %>
       <% end %>
     </tbody>
   </table>
   <%= paginate @providers %>
-  <%= link_to "New provider", new_provider_path, class:"btn btn-dark btn-sm" %>
+  <%= link_to t('provider.new_provider'), new_provider_path, class:"btn btn-dark btn-sm" %>
 </div>
 

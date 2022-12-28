@@ -1,4 +1,4 @@
 <article class="dashboard_content">
-  <div class="dashboard_content_card"><span><%= "Bancos: #{@totals[:banks]}" %></span></div>
-  <div class="dashboard_content_card"><span><%= "Proveedores: #{@totals[:providers]}" %></span></div>
+  <span class="box_card"><%= "#{t('dashboard.banks')}: #{@totals[:banks]}" %></span>
+  <span class="box_card"><%= "#{t('dashboard.providers')}: #{@totals[:providers]}" %></span>
 </article>
