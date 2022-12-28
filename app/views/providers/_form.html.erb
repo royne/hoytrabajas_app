@@ -9,14 +9,14 @@
       <%= f.input :contact_name %>
       <%= f.input :phone %>
       <%= f.simple_fields_for(:account_attributes) do |q| %>
-        <%= q.input :bank_id, as: :select, collection: @banks %>
+        <%= q.input :bank_id, as: :select, collection: @banks, selected: :bank_id %>
         <%= q.input :number %>
       <% end %>
   
     </div>
   
-    <div class="form-actions">
-      <%= f.button :submit %>
+    <div class="form-actions mt-3">
+      <%= f.button :submit, class:"btn btn-sm btn-dark"  %>
     </div>
   <% end %>
 </div>
