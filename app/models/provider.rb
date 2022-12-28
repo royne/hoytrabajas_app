@@ -10,15 +10,10 @@ class Provider < ApplicationRecord
   
   accepts_nested_attributes_for :account, update_only: true
 
+  delegate :name, to: :bank, prefix: true
+  delegate :number, to: :account, prefix: true
+
   self.per_page = 10
-
-  def bank_name
-    bank&.name
-  end
-
-  def account_number
-    account&.number
-  end
 
   private
 
